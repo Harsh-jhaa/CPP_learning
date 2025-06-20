@@ -46,7 +46,28 @@ class Stack {
 
 };
 int main(){
-            
+            Stack st(5);
+
+            st.push(10);
+            st.push(20);    
+            st.push(30);
+            st.push(40);
+            st.push(50);
+
+            // should give 50
+            cout<< "top element: "<< st.peek()<<endl; 
+
+            st.pop();
+            // should give 40
+            cout<< "top element: "<< st.peek()<<endl; 
+
+
+            for(auto i = 1; i<5; i++){
+                st.pop();
+            }
+            // should give "Stack underflow"
+           cout<< "empty:" << st.isEmpty() << endl;
+
 
 return 0;
 }
